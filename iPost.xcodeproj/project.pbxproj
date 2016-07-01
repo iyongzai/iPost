@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2816CF7B39C297CF350FEBD4 /* Pods_iPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B7F8B3F73B26032EEB1521 /* Pods_iPost.framework */; };
 		2F784D0D1D26AC9F0098CEC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F784D0C1D26AC9F0098CEC3 /* AppDelegate.swift */; };
-		2F784D0F1D26AC9F0098CEC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F784D0E1D26AC9F0098CEC3 /* ViewController.swift */; };
 		2F784D121D26AC9F0098CEC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F784D101D26AC9F0098CEC3 /* Main.storyboard */; };
 		2F784D141D26AC9F0098CEC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F784D131D26AC9F0098CEC3 /* Assets.xcassets */; };
-		2F784D171D26AC9F0098CEC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F784D151D26AC9F0098CEC3 /* LaunchScreen.storyboard */; };
+		2F784D201D26AD8F0098CEC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F784D1E1D26AD8F0098CEC3 /* LaunchScreen.storyboard */; };
+		2F784D271D26AED70098CEC3 /* AYHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F784D261D26AED70098CEC3 /* AYHomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2F784D091D26AC9F0098CEC3 /* iPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F784D0C1D26AC9F0098CEC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2F784D0E1D26AC9F0098CEC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2F784D111D26AC9F0098CEC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F784D131D26AC9F0098CEC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2F784D161D26AC9F0098CEC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F784D181D26AC9F0098CEC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F784D1F1D26AD8F0098CEC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2F784D261D26AED70098CEC3 /* AYHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AYHomeViewController.swift; sourceTree = "<group>"; };
+		9BB618586445837A96E12F98 /* Pods-iPost.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPost.release.xcconfig"; path = "Pods/Target Support Files/Pods-iPost/Pods-iPost.release.xcconfig"; sourceTree = "<group>"; };
+		B36807FB9F81773955DC2434 /* Pods-iPost.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPost.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iPost/Pods-iPost.debug.xcconfig"; sourceTree = "<group>"; };
+		E3B7F8B3F73B26032EEB1521 /* Pods_iPost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2816CF7B39C297CF350FEBD4 /* Pods_iPost.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				2F784D0B1D26AC9F0098CEC3 /* iPost */,
 				2F784D0A1D26AC9F0098CEC3 /* Products */,
+				8002777A391687749DBEEB56 /* Pods */,
+				997092094174043D84C9AC00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +61,71 @@
 		2F784D0B1D26AC9F0098CEC3 /* iPost */ = {
 			isa = PBXGroup;
 			children = (
-				2F784D0C1D26AC9F0098CEC3 /* AppDelegate.swift */,
-				2F784D0E1D26AC9F0098CEC3 /* ViewController.swift */,
-				2F784D101D26AC9F0098CEC3 /* Main.storyboard */,
-				2F784D131D26AC9F0098CEC3 /* Assets.xcassets */,
-				2F784D151D26AC9F0098CEC3 /* LaunchScreen.storyboard */,
-				2F784D181D26AC9F0098CEC3 /* Info.plist */,
+				2F784D221D26AE480098CEC3 /* Home */,
+				2F784D211D26AD9A0098CEC3 /* Support */,
 			);
 			path = iPost;
+			sourceTree = "<group>";
+		};
+		2F784D211D26AD9A0098CEC3 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				2F784D0C1D26AC9F0098CEC3 /* AppDelegate.swift */,
+				2F784D101D26AC9F0098CEC3 /* Main.storyboard */,
+				2F784D131D26AC9F0098CEC3 /* Assets.xcassets */,
+				2F784D181D26AC9F0098CEC3 /* Info.plist */,
+				2F784D1E1D26AD8F0098CEC3 /* LaunchScreen.storyboard */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		2F784D221D26AE480098CEC3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2F784D231D26AE480098CEC3 /* Model */,
+				2F784D241D26AE480098CEC3 /* View */,
+				2F784D251D26AE480098CEC3 /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2F784D231D26AE480098CEC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F784D241D26AE480098CEC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F784D251D26AE480098CEC3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2F784D261D26AED70098CEC3 /* AYHomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8002777A391687749DBEEB56 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B36807FB9F81773955DC2434 /* Pods-iPost.debug.xcconfig */,
+				9BB618586445837A96E12F98 /* Pods-iPost.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		997092094174043D84C9AC00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3B7F8B3F73B26032EEB1521 /* Pods_iPost.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F784D1B1D26AC9F0098CEC3 /* Build configuration list for PBXNativeTarget "iPost" */;
 			buildPhases = (
+				158E8E7EFC54589B7136CC11 /* [CP] Check Pods Manifest.lock */,
 				2F784D051D26AC9F0098CEC3 /* Sources */,
 				2F784D061D26AC9F0098CEC3 /* Frameworks */,
 				2F784D071D26AC9F0098CEC3 /* Resources */,
+				D71DCCA143A67D84D422EE13 /* [CP] Embed Pods Frameworks */,
+				F85FFCAB99E6F7B60521A4D3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,7 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F784D171D26AC9F0098CEC3 /* LaunchScreen.storyboard in Resources */,
+				2F784D201D26AD8F0098CEC3 /* LaunchScreen.storyboard in Resources */,
 				2F784D141D26AC9F0098CEC3 /* Assets.xcassets in Resources */,
 				2F784D121D26AC9F0098CEC3 /* Main.storyboard in Resources */,
 			);
@@ -130,13 +197,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		158E8E7EFC54589B7136CC11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D71DCCA143A67D84D422EE13 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iPost/Pods-iPost-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F85FFCAB99E6F7B60521A4D3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iPost/Pods-iPost-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2F784D051D26AC9F0098CEC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F784D0F1D26AC9F0098CEC3 /* ViewController.swift in Sources */,
 				2F784D0D1D26AC9F0098CEC3 /* AppDelegate.swift in Sources */,
+				2F784D271D26AED70098CEC3 /* AYHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,10 +266,10 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		2F784D151D26AC9F0098CEC3 /* LaunchScreen.storyboard */ = {
+		2F784D1E1D26AD8F0098CEC3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2F784D161D26AC9F0098CEC3 /* Base */,
+				2F784D1F1D26AD8F0098CEC3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -247,6 +362,7 @@
 		};
 		2F784D1C1D26AC9F0098CEC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B36807FB9F81773955DC2434 /* Pods-iPost.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iPost/Info.plist;
@@ -258,6 +374,7 @@
 		};
 		2F784D1D1D26AC9F0098CEC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BB618586445837A96E12F98 /* Pods-iPost.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iPost/Info.plist;
@@ -286,6 +403,7 @@
 				2F784D1D1D26AC9F0098CEC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
