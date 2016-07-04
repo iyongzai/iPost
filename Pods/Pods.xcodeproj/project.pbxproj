@@ -1001,6 +1001,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B07173805549FFD7883FBD595D9802C8 /* Pods-iPost.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1064,6 +1065,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3D04D3B00793F93469659B6AC960D8CA /* Pods-iPost.release.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

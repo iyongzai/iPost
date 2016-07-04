@@ -18,7 +18,43 @@ class AYHomeViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+//        let rightItem = UIBarButtonItem.init(title: "微博登录", style: .Plain, target: self, action: #selector(AYHomeViewController.weiboLogin))
+//        self.navigationItem.rightBarButtonItem = rightItem
+        
+        self.addRefreshControToTableView()
+        self.isRefreshing = false
+        self.isLoading = false
+        
+        //请求数据
+        self.startRefresh(self.refreshControl!)
     }
+    
+    func startRefresh(refreshControl:UIRefreshControl) -> Void {
+        if self.isRefreshing! || self.isLoading! {
+            return
+        }
+        self.isRefreshing = true
+        
+        let authorizeInfo = AYUtility.getModelByNSUserDefaultsForKey(kSinaAuthorizeInfo) as? AuthorizeInfo
+        if authorizeInfo?.userID == nil {//TODO: 没有授权或者token过期、无效，都需要重新授权， 后期补充
+            self.isRefreshing = false
+            self.refreshControl?.endRefreshing()
+            SinaAuthorizeHelper().authorize({[weak self] (platform, response, userInfo) -> Void in
+                print("hahah")
+                if response is WBAuthorizeResponse && (response as! WBAuthorizeResponse).userID != nil {
+                    self?.startRefresh((self?.refreshControl)!)
+                }
+                }, userInfo: nil)
+        }else{
+            SinaWeiboGetHelper().getPublicTimeline(nil, pageCount: nil, baseApp: nil, otherParams: nil) {[weak self] (platform, response, userInfo) in
+                self?.refreshControl?.endRefreshing()
+                self?.isRefreshing = false
+            }
+        }
+        
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -91,5 +127,12 @@ class AYHomeViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    func weiboLogin()->Void {
+        SinaAuthorizeHelper().authorize({ (platform, response, userInfo) -> Void in
+            print("hahah")
+            }, userInfo: nil)
+    }
 
 }

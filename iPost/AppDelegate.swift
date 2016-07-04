@@ -9,14 +9,35 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
+    
     var window: UIWindow?
+    var weiboDelegate: ThirdPlatformBaseObject?
 
-
+    class func shareDelegate()-> AppDelegate {
+        return UIApplication.sharedApplication().delegate as! AppDelegate
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        #if DEBUG
+            WeiboSDK.enableDebugMode(true)
+        #else
+            WeiboSDK.enableDebugMode(false)
+        #endif
+        WeiboSDK.registerApp(kSinaAppKey)
         return true
+    }
+    
+    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+        
+        return WeiboSDK.handleOpenURL(url, delegate: self)
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        
+        return WeiboSDK.handleOpenURL(url, delegate: self)
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -41,6 +62,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    /**
+    收到一个来自微博客户端程序的请求
+    
+    收到微博的请求后，第三方应用应该按照请求类型进行处理，处理完后必须通过 [WeiboSDK sendResponse:] 将结果回传给微博
+    @param request 具体的请求对象
+    */
+    func didReceiveWeiboRequest(request: WBBaseRequest!) {
+        if self.weiboDelegate != nil {
+            self.weiboDelegate?.didReceiveWeiboRequest(request)
+        }
+    }
+    /**
+    收到一个来自微博客户端程序的响应
+    
+    收到微博的响应后，第三方应用可以通过响应类型、响应的数据和 WBBaseResponse.userInfo 中的数据完成自己的功能
+    @param response 具体的响应对象
+    */
+    func didReceiveWeiboResponse(response: WBBaseResponse!) {
+        if self.weiboDelegate != nil {
+            self.weiboDelegate?.didReceiveWeiboResponse(response)
+        }
+    }
 
 }
 
